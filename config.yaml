@@ -1,0 +1,52 @@
+# Basic Information
+baseURL: 'https://leonardwalujan.com'
+title: Leonard Walujan
+copyright: Leonard Walujan
+description: This is Leonard Walujan
+
+author:
+  name: Leonard Walujan
+  url: 'https://www.instagram.com/lwalujan'
+
+relativeURLs: 'true'
+
+# Remove HTML whitespace
+minify:
+  tdewolff:
+    html:
+      keepWhitespace: false
+
+# Robots
+enableRobotsTXT: true
+
+# Params
+params:
+  dateFormat: '2 January 2006, 15.04'
+  dateFormatnoTime: '2 Jan 2006'
+  googleAnalyticsID: G-LQH2Y4HLYB
+
+# Language
+defaultContentLanguage: id
+languageCode: id
+
+# HTML in Markdown
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# Blog post Section
+paginate: 6
+summaryLength: 10
+
+# Account Links
+social:
+  facebook: https://www.facebook.com/lwalujan
+  instagram: https://www.instagram.com/lwalujan
+  igcreator: https://www.instagram.com/walujanl
+  linkedin: https://www.linkedin.com/in/leonardwalujan
+  youtube: https://www.youtube.com/channel/UCQy20n9fj8_Sts1nKfRajJQ?sub_confirmation=1
+  github: https://github.com/leonardwalujan
+  unsplash: https://unsplash.com/@leonardwalujan
+  lightroom: https://lightroom.adobe.com/u/leonardwalujan
+  behance: https://www.behance.net/leonardwalujan

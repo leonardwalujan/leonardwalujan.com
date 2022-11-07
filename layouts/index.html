@@ -1,0 +1,14 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section id="home" class="pt-24 lg:pt-40">{{- partial "home/home-hero" . }}</section>
+<!-- End Hero Section -->
+
+<!-- About Section -->
+<section id="about" class="pt-12 pb-12 lg:pt-20">{{- partial "home/about-section" . }}</section>
+<!-- End About Section -->
+
+<!-- Social Section -->
+<section id="social" class="pb-12">{{- partial "home/social-card" . -}}</section>
+
+<section id="work" class="pb-12">{{- partial "home/work-card" . -}}</section>
+{{ end }}

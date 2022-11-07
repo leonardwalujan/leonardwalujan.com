@@ -1,0 +1,34 @@
+<!-- Done -->
+{{ if .IsHome }}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "{{ .Permalink }}",
+    "name": "{{ .Site.Title }}",
+    "description": "{{ .Description | plainify }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ .Site.Author.name }}"
+    }
+  }
+</script>
+{{ end }} {{ if .IsPage }}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ .Title }}",
+    "genre": "{{ range .Params.categories }}{{ . }}{{ end }}",
+    "url": "{{ .Permalink }}",
+    {{ if .Params.showthedate }}"datePublished": "{{ time .Date }}",{{ end }}
+    "description": "{{ if .Description }}{{ .Description | plainify }}{{ else }}{{if .IsPage}}{{ .Summary | plainify  }}{{ end }}{{ end }}",
+    "author": {
+      "@type": "Person",
+      {{ if .Params.author }}"name": "{{ .Params.author }}"
+      {{ else }}"name": "{{ .Site.Author.name }}"
+      {{ end }}
+    }
+  }
+</script>
+{{ end }}

@@ -1,0 +1,50 @@
+{{ define "main" }}
+
+<section class="py-24 list">
+  <div class="container">
+    <div class="w-full px-4">
+      <div class="mb-16 list-header">
+        <h1>{{ .Title }}</h1>
+        {{ .Content | markdownify }}
+
+        <h2>Blog</h2>
+        {{ range (.Site.RegularPages.GroupByDate "January 2006") }} {{ if (where .Pages "Section" "blog") }}
+        <h3>{{ .Key }}</h3>
+        <ul>
+          {{ range ((where .Pages "Section" "blog")) }}
+          <li class="list-group-item">
+            <a class="hover:underline" href="{{ .RelPermalink }}"> {{ .PublishDate.Format "02 January" }} - {{ .Title }} </a>
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }} {{ end }}
+
+        <h2 class="pt-10">Work</h2>
+        {{ range (.Site.RegularPages.GroupByDate "January 2006") }} {{ if (where .Pages "Section" "work") }}
+        <h3>{{ .Key }}</h3>
+        <ul>
+          {{ range ((where .Pages "Section" "work")) }}
+          <li class="list-group-item">
+            <a class="hover:underline" href="{{ .RelPermalink }}"> {{ .PublishDate.Format "02 January" }} - {{ .Title }} </a>
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }} {{ end }}
+
+        <h2 class="pt-10">Tutorial</h2>
+        {{ range (.Site.RegularPages.GroupByDate "January 2006") }} {{ if (where .Pages "Section" "tutorial") }}
+        <h3>{{ .Key }}</h3>
+        <ul>
+          {{ range ((where .Pages "Section" "tutorial")) }}
+          <li class="list-group-item">
+            <a class="hover:underline" href="{{ .RelPermalink }}"> {{ .PublishDate.Format "02 January" }} - {{ .Title }} </a>
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }} {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,44 @@
+<!-- Will be optimize later -->
+
+<!-- Title and Description -->
+{{- partial "head/meta/title" . -}} {{- partial "head/meta/description" . -}}
+
+<!-- Keyword -->
+{{- partial "head/meta/keyword" . -}}
+
+<!-- Opengraph and Twitter Card -->
+{{- partial "head/meta/social" . -}}
+
+<!-- Robots Meta -->
+{{ if .Params.robots }}
+<meta name="robots" content="{{ .Params.robots }}" />
+{{ end }}
+
+<!-- Other Meta -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Canonical URL -->
+{{- partial "head/canonical" . -}}
+
+<!-- Style -->
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/tailwind.css" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="{{ .Site.BaseURL }}/logo/lw-logo-white-2048p.webp" />
+
+<!-- Scripts -->
+<script>
+  // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+  if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+</script>
+
+<!-- Google Analytics -->
+{{ if .Site.Params.GoogleAnalyticsID }} {{ partial "head/google-analytics" . }} {{ end }}
+
+<!-- Schema.org -->
+{{- partial "head/schema.org/organization" . -}} {{- partial "head/schema.org/website" . -}}

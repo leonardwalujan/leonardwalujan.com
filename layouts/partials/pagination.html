@@ -1,0 +1,51 @@
+<!-- Done -->
+{{ $pag := $.Paginator }} {{ if gt $pag.TotalPages 1 }}
+<nav aria-label="Page navigation">
+  <ul class="flex flex-row justify-center gap-2 my-8 md:justify-start md:gap-4">
+    {{- with .Paginator }} {{- $currentPageNumber := .PageNumber }} {{- with .First }} {{- if ne $currentPageNumber .PageNumber }}
+
+    <!-- First Page -->
+    <li class="w-8 h-8 rounded-full page-item hover:bg-primary dark:hover:bg-primary_dark">
+      <a href="{{ .URL }}" aria-label="First" class="inline-flex items-center justify-center w-8 h-8 p-1 text-xl rounded-full hover:text-white dark:text-white dark:hover:text-black" role="button"
+        ><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentcolor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 19l-7-7 7-7m8 14-7-7 7-7"></path></svg
+      ></a>
+    </li>
+    {{- end }} {{- end }} {{- with .Prev }}
+
+    <!-- Previous Page -->
+    <li class="w-8 h-8 rounded-full page-item hover:bg-primary dark:hover:bg-primary_dark">
+      <a href="{{ .URL }}" aria-label="Previous" class="inline-flex items-center justify-center w-8 h-8 p-1 text-xl rounded-full hover:text-white dark:text-white dark:hover:text-black" role="button"
+        ><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentcolor" stroke-width="2" title="Previous Page"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg
+      ></a>
+    </li>
+    {{- end }} {{- $slots := 5 }} {{- $start := math.Max 1 (sub .PageNumber (math.Floor (div $slots 2))) }} {{- $end := math.Min .TotalPages (sub (add $start $slots) 1) }} {{- if lt (add (sub $end $start) 1) $slots }} {{- $start = math.Max
+    1 (add (sub $end $slots) 1) }} {{- end }} {{- range $k := seq $start $end }} {{- if eq $.Paginator.PageNumber $k }}
+
+    <!-- Page Item -->
+    <li class="w-8 h-8 rounded-full page-item bg-primary dark:bg-primary_dark">
+      <span aria-current="page" aria-label="Page {{ $k }}" class="inline-flex justify-center w-8 h-8 p-1 text-lg text-white rounded-full dark:text-black">{{ $k }}</span>
+    </li>
+    {{- else }}
+    <li class="w-8 h-8 rounded-full page-item dark:bg-slate-800 dark:text-white">
+      <a href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}" aria-label="Page {{ $k }}" class="inline-flex justify-center w-8 h-8 p-1 text-lg rounded-full page-link" role="button">{{ $k }}</a>
+    </li>
+    {{- end }} {{- end }} {{- with .Next }}
+
+    <!-- Next Page -->
+    <li class="w-8 h-8 rounded-full page-item hover:bg-primary dark:hover:bg-primary_dark">
+      <a href="{{ .URL }}" aria-label="Next" class="inline-flex items-center justify-center w-8 h-8 p-1 text-xl rounded-full page-link hover:text-white dark:text-white dark:hover:text-black" role="button"
+        ><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentcolor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg
+      ></a>
+    </li>
+    {{- end }} {{- with .Last }} {{- if ne $currentPageNumber .PageNumber }}
+
+    <!-- Last Page -->
+    <li class="w-8 h-8 rounded-full page-item hover:bg-primary dark:hover:bg-primary_dark">
+      <a href="{{ .URL }}" aria-label="Last" class="inline-flex items-center justify-center w-8 h-8 p-1 text-xl rounded-full page-link hover:text-white dark:text-white dark:hover:text-black" role="button"
+        ><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentcolor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg
+      ></a>
+    </li>
+    {{- end }} {{- end }} {{- end }}
+  </ul>
+</nav>
+{{ end }}

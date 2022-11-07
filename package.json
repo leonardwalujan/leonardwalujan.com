@@ -1,0 +1,22 @@
+{
+  "name": "leonardnwalujan",
+  "version": "1.0.0",
+  "description": "This is Leonard Walujan",
+  "main": "",
+  "scripts": {
+    "hugodev": "hugo server --gc --disableFastRender",
+    "hugoprod": "hugo --gc --minify",
+    "taildev": "npx tailwindcss -i ./src/input.css -o ./static/css/tailwind.css --watch",
+    "tailprod": "npx tailwindcss -i ./src/input.css -o ./static/css/tailwind.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.4",
+    "tailwindcss": "^3.1.8"
+  },
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2"
+  }
+}

@@ -1,0 +1,311 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+.article h1 {
+  @apply my-4 text-3xl font-semibold text-primary dark:text-white lg:text-4xl;
+}
+
+.article h2 {
+  @apply my-4 text-2xl font-semibold text-dark dark:text-secondary_dark;
+}
+
+.article p {
+  @apply mb-4 leading-relaxed font-poppins text-text dark:text-text_dark;
+}
+
+.article li {
+  @apply mb-2 ml-8 list-disc text-text dark:text-text_dark;
+}
+
+.article-content h1 {
+  @apply my-4 text-3xl font-semibold text-primary dark:text-white lg:text-4xl;
+}
+
+.article-content h2 {
+  @apply my-4 text-2xl font-semibold text-dark dark:text-secondary_dark;
+}
+
+.article-content p {
+  @apply my-4 text-lg leading-loose font-merriweather text-text dark:text-text_dark;
+}
+
+.article-content a {
+  @apply my-4 text-lg leading-loose font-merriweather hover:underline text-primary dark:text-primary_dark;
+}
+
+.article-content img {
+  @apply my-4;
+}
+
+.article-content li {
+  @apply mb-2 ml-8 text-lg list-disc font-merriweather text-text dark:text-text_dark;
+}
+
+.list-header h1 {
+  @apply mb-4 text-3xl font-semibold text-primary dark:text-white lg:text-4xl;
+}
+
+.list-header h2 {
+  @apply my-4 text-2xl font-semibold text-dark dark:text-secondary_dark;
+}
+
+.list-header p {
+  @apply mb-4 leading-relaxed text-text dark:text-text_dark;
+}
+
+.list h1 {
+  @apply my-4 font-semibold text-primary dark:text-white lg:text-4xl;
+}
+
+.list h2 {
+  @apply my-4 text-2xl font-semibold text-dark dark:text-secondary_dark;
+}
+
+.list h3 {
+  @apply my-4 text-xl font-semibold text-dark dark:text-secondary_dark;
+}
+
+.list p {
+  @apply leading-relaxed text-text dark:text-text_dark;
+}
+
+.list li {
+  @apply list-none text-text dark:text-text_dark;
+}
+
+.table-item {
+  @apply px-4 py-2 font-semibold border-r text-text dark:text-text_dark;
+}
+
+.table-item-second {
+  @apply px-4 py-2 border-r text-text dark:text-text_dark;
+}
+
+th {
+  @apply text-text dark:text-text_dark;
+}
+
+td > a {
+  @apply px-4 py-2 text-text hover:text-primary hover:underline dark:text-text_dark dark:hover:text-white;
+}
+
+.navbar-fixed {
+  @apply fixed z-[9999] bg-white shadow-md dark:bg-dark;
+}
+
+.hamburger-line {
+  @apply my-2 block h-[2px] w-[30px] bg-dark dark:bg-white;
+}
+
+.hamburger-active {
+  @apply fill-primary;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Merriweather';
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/merriweather/merriweather-300-latin-italic.woff') format('woff'), url('/fonts/merriweather/merriweather-300-latin-italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Merriweather';
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/merriweather/merriweather-300-latin-normal.woff') format('woff'), url('/fonts/merriweather/merriweather-300-latin-normal.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Merriweather';
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/merriweather/merriweather-400-latin-italic.woff') format('woff'), url('/fonts/merriweather/merriweather-400-latin-italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Merriweather';
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/merriweather/merriweather-400-latin-normal.woff') format('woff'), url('/fonts/merriweather/merriweather-400-latin-normal.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/merriweather/merriweather-700-latin-italic.woff') format('woff'), url('/fonts/merriweather/merriweather-700-latin-italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/merriweather/merriweather-700-latin-normal.woff') format('woff'), url('/fonts/merriweather/merriweather-700-latin-normal.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Merriweather';
+    font-weight: 900;
+    font-display: swap;
+    src: url('/fonts/merriweather/merriweather-900-latin-italic.woff') format('woff'), url('/fonts/merriweather/merriweather-900-latin-italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Merriweather';
+    font-weight: 900;
+    font-display: swap;
+    src: url('/fonts/merriweather/merriweather-900-latin-normal.woff') format('woff'), url('/fonts/merriweather/merriweather-900-latin-normal.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 100;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-100-latin-italic.woff') format('woff'), url('/fonts/poppins/poppins-100-latin-italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 100;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-100-latin-regular.woff') format('woff'), url('/fonts/poppins/poppins-100-latin-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 200;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-200-latin-italic.woff') format('woff'), url('/fonts/poppins/poppins-200-latin-italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 200;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-200-latin-regular.woff') format('woff'), url('/fonts/poppins/poppins-200-latin-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-300-latin-italic.woff') format('woff'), url('/fonts/poppins/poppins-300-latin-italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-300-latin-regular.woff') format('woff'), url('/fonts/poppins/poppins-300-latin-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-400-latin-italic.woff') format('woff'), url('/fonts/poppins/poppins-400-latin-italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-400-latin-regular.woff') format('woff'), url('/fonts/poppins/poppins-400-latin-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-500-latin-italic.woff') format('woff'), url('/fonts/poppins/poppins-500-latin-italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-500-latin-regular.woff') format('woff'), url('/fonts/poppins/poppins-500-latin-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-600-latin-italic.woff') format('woff'), url('/fonts/poppins/poppins-600-latin-italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-600-latin-regular.woff') format('woff'), url('/fonts/poppins/poppins-600-latin-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-700-latin-italic.woff') format('woff'), url('/fonts/poppins/poppins-700-latin-italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-700-latin-regular.woff') format('woff'), url('/fonts/poppins/poppins-700-latin-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 800;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-800-latin-italic.woff') format('woff'), url('/fonts/poppins/poppins-800-latin-italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 800;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-800-latin-regular.woff') format('woff'), url('/fonts/poppins/poppins-800-latin-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-900-latin-italic.woff') format('woff'), url('/fonts/poppins/poppins-900-latin-italic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-display: swap;
+    src: url('/fonts/poppins/poppins-900-latin-regular.woff') format('woff'), url('/fonts/poppins/poppins-900-latin-regular.woff2') format('woff2');
+  }
+
+  html {
+    font-family: 'Poppins', system-ui, sans-serif;
+  }
+
+  .article p {
+    font-family: 'Merriweather', system-ui, sans-serif;
+  }
+}
+
+.svg-icon {
+  display: inline-flex;
+  align-self: center;
+}
+
+.svg-icon svg {
+  height: 1em;
+  width: 1em;
+}
+
+.svg-icon.svg-baseline svg {
+  top: 0.25em;
+  position: relative;
+}

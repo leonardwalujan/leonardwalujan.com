@@ -1,0 +1,10 @@
+<!-- Will be optimize later -->
+<!DOCTYPE html>
+<html lang="{{ .Language.Lang }}" class="scroll-smooth">
+  {{- partial "head" . -}}
+  <body class="transition duration-200 ease-in-out font-poppins dark:bg-dark">
+    {{- partial "header" . -}}
+    <main id="top">{{ block "main" . }}{{ end }}</main>
+    {{- partial "footer" . -}}
+  </body>
+</html>
