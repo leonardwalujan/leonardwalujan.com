@@ -1,7 +1,7 @@
 {
-  "name": "leonardwalujan",
+  "name": "leonardwalujan.com",
   "version": "1.0.0",
-  "description": "This is Leonard Walujan",
+  "description": "Leonard Walujan's Official Website",
   "main": "",
   "scripts": {
     "hugodev": "hugo server --gc --disableFastRender",
@@ -10,13 +10,11 @@
     "tailprod": "npx tailwindcss -i ./src/input.css -o ./static/css/tailwind.css --minify"
   },
   "keywords": [],
-  "author": "",
+  "author": "Leonard Walujan",
   "license": "ISC",
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.4",
-    "tailwindcss": "^3.2.2"
-  },
-  "dependencies": {
-    "@tailwindcss/aspect-ratio": "^0.4.2"
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.8",
+    "tailwindcss": "^3.2.4"
   }
 }
