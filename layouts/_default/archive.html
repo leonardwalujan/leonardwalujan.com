@@ -13,7 +13,8 @@
         <ul>
           {{ range ((where .Pages "Section" "blog")) }}
           <li class="list-group-item">
-            <a class="hover:underline" href="{{ .RelPermalink }}"> {{ .PublishDate.Format "02 January" }} - {{ .Title }} </a>
+            <a class="hover:underline" href="{{ .RelPermalink }}"> {{ .PublishDate.Format "02 January" }} - {{ .Title }}
+            </a>
           </li>
           {{ end }}
         </ul>
@@ -25,19 +26,21 @@
         <ul>
           {{ range ((where .Pages "Section" "work")) }}
           <li class="list-group-item">
-            <a class="hover:underline" href="{{ .RelPermalink }}"> {{ .PublishDate.Format "02 January" }} - {{ .Title }} </a>
+            <a class="hover:underline" href="{{ .RelPermalink }}"> {{ .PublishDate.Format "02 January" }} - {{ .Title }}
+            </a>
           </li>
           {{ end }}
         </ul>
         {{ end }} {{ end }}
 
-        <h2 class="pt-10">Tutorial</h2>
-        {{ range (.Site.RegularPages.GroupByDate "January 2006") }} {{ if (where .Pages "Section" "tutorial") }}
+        <h2 class="pt-10">Notes</h2>
+        {{ range (.Site.RegularPages.GroupByDate "January 2006") }} {{ if (where .Pages "Section" "notes") }}
         <h3>{{ .Key }}</h3>
         <ul>
-          {{ range ((where .Pages "Section" "tutorial")) }}
+          {{ range ((where .Pages "Section" "notes")) }}
           <li class="list-group-item">
-            <a class="hover:underline" href="{{ .RelPermalink }}"> {{ .PublishDate.Format "02 January" }} - {{ .Title }} </a>
+            <a class="hover:underline" href="{{ .RelPermalink }}"> {{ .PublishDate.Format "02 January" }} - {{ .Title }}
+            </a>
           </li>
           {{ end }}
         </ul>
