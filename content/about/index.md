@@ -74,7 +74,7 @@ Daftar akun resmi Leonard Walujan
     </tr>
     <tr class="border-b">
       <td class="table-item">YouTube</td>
-      <td><a href="https://www.youtube.com/channel/UCQy20n9fj8_Sts1nKfRajJQ?sub_confirmation=1" target="_blank" rel="nofollow, noopener">@leonardwalujan</a></td>
+      <td><a href="https://www.youtube.com/@leonardwalujan?sub_confirmation=1" target="_blank" rel="nofollow, noopener">@leonardwalujan</a></td>
     </tr>
     <tr class="border-b">
       <td class="table-item">GitHub</td>
